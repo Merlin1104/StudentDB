@@ -23,6 +23,27 @@ namespace StudentDB
             {
                 Console.WriteLine(s.Jmeno + " " + s.Primeni + " " + s.Vek);
             }
+            Console.WriteLine("LINE");
+            foreach (Student s in databaza.seznamStudentu)
+            {
+                Console.WriteLine(s.Jmeno + " " + s.Primeni + " " + s.Vek);
+            }
+
+            //inlinovy if
+            bool bylo;
+            //if (trideno) bylo = true;
+            bylo = (trideno) ? true : false;
+
+            Console.WriteLine();
+
+            Kolekce k = new Kolekce();
+            k.NaplnFrontu();
+            Console.WriteLine();
+            k.NaplnZasobnik();
+            Console.WriteLine();
+            k.NaplnTabulku();
+
+           
 
             Console.ReadLine();
         }

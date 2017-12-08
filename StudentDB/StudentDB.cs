@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -12,7 +13,9 @@ namespace StudentDB
         string[] jmeno = new string [] {"Peter", "Michal", "Tomas", "Jano", "Istvan" };
         string[] prijmeni = new string[] {"Cierny", "Zeleny", "Novak", "Biely", "Hrnciar" };
         public Student[] poleStudenti= new Student[delkaPole]; //aby to nebolo pole stringov, ale pole studentov 
-
+        //tuto zacina Array list
+        public ArrayList seznamStudentu = new ArrayList();
+        
 
         Random nahodneCislo = new Random();
 
@@ -26,6 +29,7 @@ namespace StudentDB
                 student.Vek = nahodneCislo.Next(15, 80);
 
                 poleStudenti[i] = student;
+                seznamStudentu.Add(student);
                 
             }
         }
